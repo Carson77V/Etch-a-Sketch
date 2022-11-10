@@ -25,10 +25,9 @@ function colorGrid(){
     container.addEventListener('mouseover', function(e){
         // if the block has a class named gribBlock then color the block
         if(e.target.classList.contains('gridBlock')){
-            const selectedBlock = document.querySelector('.grid > .gridBlock');
-
-            selectedBlock.classList.add('colored');
-            selectedBlock.setAttribute('style', 'background-color: blue;');
+            // the add a new class to the targeted block and change color 
+            e.target.classList.add('colored');
+            e.target.setAttribute('style', 'background-color: blue;');
         }
     })
 }
