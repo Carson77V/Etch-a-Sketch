@@ -15,3 +15,18 @@ function createGrid(){
 }
 
 createGrid();
+colorGrid();
+
+// this function creates the event listener to hover over each grid block
+function colorGrid(){
+    // selects the parent class of the grid blocks
+    const container = document.querySelector('.grid');
+    // when mouse is on block do function
+    container.addEventListener('mouseover', function(e){
+        // if the block has a class named gribBlock then color the block
+        if(e.target.classList.contains('gridBlock')){
+            console.log("it worked!");
+        }
+    })
+}
+
