@@ -12,10 +12,10 @@ function createGrid(){
         // appends gridBlock to the grid div
         grid.appendChild(gridBlock);
     }
+    colorGrid();
 }
 
 createGrid();
-colorGrid();
 
 // this function creates the event listener to hover over each grid block
 function colorGrid(){
@@ -25,7 +25,10 @@ function colorGrid(){
     container.addEventListener('mouseover', function(e){
         // if the block has a class named gribBlock then color the block
         if(e.target.classList.contains('gridBlock')){
-            console.log("it worked!");
+            const selectedBlock = document.querySelector('.grid > .gridBlock');
+
+            selectedBlock.classList.add('colored');
+            selectedBlock.setAttribute('style', 'background-color: blue;');
         }
     })
 }
