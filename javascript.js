@@ -55,15 +55,16 @@ function changeGrid(){
 
 // this function deletes the current grid
 function deleteGrid(size){
-    
+        // put all rows into a nodelist
         const rows = document.querySelectorAll('.row');
+        // iterates through the nodelist and removes each row
         rows.forEach((row) => {
             row.parentNode.removeChild(row);
         })
     
 }
 
-
+// function returns and rgb() string with a random color
 function getRandomColor(){
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
