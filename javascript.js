@@ -34,7 +34,7 @@ function colorGrid(){
         if(e.target.classList.contains('gridBlock')){
             // the add a new class to the targeted block and change color 
             e.target.classList.add('colored');
-            e.target.setAttribute('style', 'background-color: blue;');
+            e.target.setAttribute('style', 'background-color: black;');
         }
     })
 }
