@@ -1,16 +1,16 @@
 .grid{
     display: flex;
     flex-direction: column;
-    border-width: 1px;
-    justify-content: center;
-    align-content: center;
-    max-height: 800px;
+    width: 800px;
+    height: 800px;
 }
 
 .row{
+    flex: 1;
     display: flex;
     flex-direction: row;
     max-width: 800px;
+    height: 98;
 }
 
 .gridBlock{
@@ -18,5 +18,4 @@
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    height: 100px;
 }
