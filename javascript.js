@@ -1,4 +1,4 @@
-// create a 16x16 grid
+// create a grid with a size of the parameter
 function createGrid(size){
     // select the div where the grib will be placed
     const grid = document.querySelector('.grid');
@@ -42,5 +42,14 @@ function colorGrid(){
 // function prompts user to enter a new number to change grid size
 function changeGrid(){
     let size = prompt("Enter grid size (less than 100)", "16");
+    if (+size > 100 || +size < 1){
+        alert("Invalid input! Enter a number between 1 and 100");
+    }
+
+}
+
+// this function deletes the current grid
+function deleteGrid(){
+
 }
 
