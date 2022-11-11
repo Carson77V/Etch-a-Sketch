@@ -44,12 +44,22 @@ function changeGrid(){
     let size = prompt("Enter grid size (less than 100)", "16");
     if (+size > 100 || +size < 1){
         alert("Invalid input! Enter a number between 1 and 100");
+        return;
     }
 
+    // delete the old grid before creating a new one
+    deleteGrid(size);
+    // generate the new grid
+    createGrid(size);
 }
 
 // this function deletes the current grid
-function deleteGrid(){
-
+function deleteGrid(size){
+    
+        const rows = document.querySelectorAll('.row');
+        rows.forEach((row) => {
+            row.parentNode.removeChild(row);
+        })
+    
 }
 
