@@ -34,7 +34,7 @@ function colorGrid(){
         if(e.target.classList.contains('gridBlock')){
             // the add a new class to the targeted block and change color 
             e.target.classList.add('colored');
-            e.target.setAttribute('style', 'background-color: black;');
+            e.target.setAttribute('style', `background-color: ${getRandomColor()}`);
         }
     })
 }
@@ -61,5 +61,14 @@ function deleteGrid(size){
             row.parentNode.removeChild(row);
         })
     
+}
+
+
+function getRandomColor(){
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    //returns a string for css color rgb(r, g, b)
+    return `rgb(${red}, ${green}, ${blue});`;
 }
 
