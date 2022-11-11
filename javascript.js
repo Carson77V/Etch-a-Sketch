@@ -1,16 +1,16 @@
 // create a 16x16 grid
-function createGrid(){
+function createGrid(size){
     // select the div where the grib will be placed
     const grid = document.querySelector('.grid');
 
     // the loop generates a 16x16 grid
-    for (let i = 0; i < 8; i++){
+    for (let i = 0; i < size; i++){
             // create a new row
             const row = document.createElement('div');
             row.classList.add('row');
             grid.appendChild(row);
 
-            for (let i = 0; i < 8; i++){
+            for (let i = 0; i < size; i++){
                 // this creates one block in the grid
                 const gridBlock = document.createElement('div');
                 gridBlock.classList.add('gridBlock');
@@ -22,7 +22,7 @@ function createGrid(){
     }
 }
 
-createGrid();
+createGrid(16);
 
 // this function creates the event listener to hover over each grid block
 function colorGrid(){
@@ -39,6 +39,7 @@ function colorGrid(){
     })
 }
 
+// function prompts user to enter a new number to change grid size
 function changeGrid(){
     let size = prompt("Enter grid size (less than 100)", "16");
 }
