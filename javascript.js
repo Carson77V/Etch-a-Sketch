@@ -19,8 +19,8 @@ function createGrid(){
                 row.appendChild(gridBlock);
             }
             colorGrid();
-        }
     }
+}
 
 createGrid();
 
@@ -37,5 +37,9 @@ function colorGrid(){
             e.target.setAttribute('style', 'background-color: blue;');
         }
     })
+}
+
+function changeGrid(){
+    let size = prompt("Enter grid size (less than 100)", "16");
 }
 
