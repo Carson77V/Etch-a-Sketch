@@ -4,16 +4,23 @@ function createGrid(){
     const grid = document.querySelector('.grid');
 
     // the loop generates a 16x16 grid
-    for (let i = 0; i < 16; i++){
-        // this creates one block in the grid
-        const gridBlock = document.createElement('div');
-        gridBlock.classList.add('gridBlock');
+    for (let i = 0; i < 8; i++){
+            // create a new row
+            const row = document.createElement('div');
+            row.classList.add('row');
+            grid.appendChild(row);
 
-        // appends gridBlock to the grid div
-        grid.appendChild(gridBlock);
+            for (let i = 0; i < 8; i++){
+                // this creates one block in the grid
+                const gridBlock = document.createElement('div');
+                gridBlock.classList.add('gridBlock');
+    
+                // appends gridBlock to the grid div
+                row.appendChild(gridBlock);
+            }
+            colorGrid();
+        }
     }
-    colorGrid();
-}
 
 createGrid();
 
