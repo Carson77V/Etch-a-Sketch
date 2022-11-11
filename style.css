@@ -1,3 +1,8 @@
+body{
+    max-width: 1200px;
+    margin: auto;
+}
+
 .grid{
     display: flex;
     flex-direction: column;
@@ -18,4 +23,30 @@
     border-style: solid;
     border-color: black;
     border-width: 1px;
+}
+
+h1{
+    font-size: 50px;
+    font-family: Impact, fantasy;
+    color: rgb(239, 57, 18);
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button{
+    background-color: rgb(239, 57, 18);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 100px;
+    border: 0;
+}
+
+button:hover{
+    background-color: black;
 }
