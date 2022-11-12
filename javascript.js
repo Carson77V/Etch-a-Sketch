@@ -5,23 +5,24 @@ function createGrid(size){
 
     // the loop generates a 16x16 grid
     for (let i = 0; i < size; i++){
-            // create a new row
-            const row = document.createElement('div');
-            row.classList.add('row');
-            grid.appendChild(row);
+        // create a new row
+        const row = document.createElement('div');
+        row.classList.add('row');
+        grid.appendChild(row);
 
-            for (let i = 0; i < size; i++){
-                // this creates one block in the grid
-                const gridBlock = document.createElement('div');
-                gridBlock.classList.add('gridBlock');
+        for (let i = 0; i < size; i++){
+            // this creates one block in the grid
+            const gridBlock = document.createElement('div');
+            gridBlock.classList.add('gridBlock');
     
-                // appends gridBlock to the grid div
-                row.appendChild(gridBlock);
-            }
-            colorGrid();
+            // appends gridBlock to the grid div
+            row.appendChild(gridBlock);
+        }
     }
+    colorGrid();
 }
 
+// create initial grid
 createGrid(16);
 
 // this function creates the event listener to hover over each grid block
@@ -35,6 +36,7 @@ function colorGrid(){
             // the add a new class to the targeted block and change color 
             e.target.classList.add('colored');
             e.target.setAttribute('style', `background-color: ${getRandomColor()}`);
+            console.log(e);
         }
     })
 }
