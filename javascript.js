@@ -36,7 +36,6 @@ function colorGrid(){
             // the add a new class to the targeted block and change color 
             e.target.classList.add('colored');
             e.target.setAttribute('style', `background-color: ${getRandomColor()}`);
-            console.log(e);
         }
     })
 }
